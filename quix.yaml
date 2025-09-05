@@ -98,3 +98,4 @@ topics:
   - name: test-data
   - name: http-source
   - name: lead-data
+  - name: show-wifi-heartbeat
