@@ -1,0 +1,12 @@
+name: wifi-heartbeat
+language: python
+variables:
+  - name: output
+    inputType: OutputTopic
+    description: This is the output topic for hello world data
+    defaultValue: show-wifi-heartbeat
+    required: true
+dockerfile: dockerfile
+runEntryPoint: main.py
+defaultFile: main.py
+libraryItemId: web-api-gateway
