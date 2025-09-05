@@ -8,7 +8,7 @@ metadata:
 deployments:
   - name: Motor API
     application: http-api-source
-    version: a8d621a4933222cf7f907c5686b48f1620b5968d
+    version: bc1988d9a1d4411b05ade5f6e13ad731480cf717
     deploymentType: Service
     resources:
       cpu: 200
