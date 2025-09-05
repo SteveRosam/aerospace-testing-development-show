@@ -1,0 +1,23 @@
+name: lead-capture-ui
+language: python
+variables:
+  - name: SECRET_KEY
+    inputType: Secret
+    multiline: false
+    defaultValue: SECRET_KEY
+  - name: ANTHROPIC_API_KEY
+    inputType: Secret
+    multiline: false
+    defaultValue: ANTHROPIC_API_KEY
+  - name: ADMIN_PASSWORD
+    inputType: Secret
+    multiline: false
+    defaultValue: ADMIN_PASSWORD
+  - name: ANALYSIS_WEBHOOK_URL
+    inputType: FreeText
+    multiline: false
+    defaultValue: https://gateway-demo-aeroshow-prod.demo.quix.io/data
+dockerfile: dockerfile
+runEntryPoint: main.py
+defaultFile: main.py
+libraryItemId: web-api-gateway

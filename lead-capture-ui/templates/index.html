@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Analyzer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Email Analyzer</h1>
+        <div class="user-info">
+            <span>Welcome, {{ current_user.username }}</span>
+            <a href="{{ url_for('logout') }}" class="btn btn-logout">Logout</a>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>Analyze Email</h2>
+                <form id="emailForm" class="email-form">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required 
+                               placeholder="Enter email to analyze" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Analyze</button>
+                </form>
+            </div>
+            
+            <div class="card" id="results" style="display: none;">
+                <h2>Analysis Results</h2>
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Analyzing email, please wait...</p>
+                </div>
+                <div id="analysisResult" class="analysis-result">
+                    <div class="company-info">
+                        <h3 id="companyName"></h3>
+                        <div class="company-links">
+                            <a id="companyWebsite" href="#" target="_blank" class="btn btn-outline">
+                                <i class="fas fa-globe"></i> Visit Website
+                            </a>
+                            <a id="linkedinLink" href="#" target="_blank" class="btn btn-outline linkedin" style="display: none;">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                    <div class="topics-section">
+                        <h4>Key Insights</h4>
+                        <ul id="topicsList" class="topics-list">
+                            <!-- Topics will be inserted here by JavaScript -->
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
