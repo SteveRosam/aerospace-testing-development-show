@@ -74,6 +74,23 @@ deployments:
         description: This is the output topic for hello world data
         required: true
         value: lead-data
+  - name: WIFI Heartbeat
+    application: wifi-heartbeat
+    version: latest
+    deploymentType: Service
+    resources:
+      cpu: 200
+      memory: 500
+      replicas: 1
+    publicAccess:
+      enabled: true
+      urlPrefix: gateway-3
+    variables:
+      - name: output
+        inputType: OutputTopic
+        description: This is the output topic for hello world data
+        required: true
+        value: show-wifi-heartbeat
 
 # This section describes the Topics of the data pipeline
 topics:
