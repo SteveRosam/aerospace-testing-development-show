@@ -107,6 +107,13 @@ deployments:
         inputType: OutputTopic
         description: Name of the output topic to send data to.
         value: data-input
+    plugin:
+        embeddedView: true            # Enables embedded UI (frontend renders iframe)
+        sidebarItem:                  # Optional environment sidebar shortcut
+            show: true                  # Whether to display a shortcut in the sidebar
+            label: "Flet Input"       # Text for the menu item
+            icon: "tune"                 # Material icon name
+            order: 1                    # Ordering (lower = higher)
 
 # This section describes the Topics of the data pipeline
 topics:
