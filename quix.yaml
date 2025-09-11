@@ -94,7 +94,7 @@ deployments:
   - name: Flet Input Form
     application: flet-input-form
     version: latest
-    deploymentType: Managed
+    deploymentType: Service
     resources:
       cpu: 200
       memory: 500
