@@ -108,12 +108,28 @@ deployments:
         description: Name of the output topic to send data to.
         value: data-input
     plugin:
-        embeddedView: true            # Enables embedded UI (frontend renders iframe)
-        sidebarItem:                  # Optional environment sidebar shortcut
-            show: true                  # Whether to display a shortcut in the sidebar
-            label: "Flet Input"       # Text for the menu item
-            icon: "tune"                 # Material icon name
-            order: 1                    # Ordering (lower = higher)
+      embeddedView: true
+      sidebarItem:
+        show: true
+        label: Flet Input
+        icon: tune
+        order: 1
+  - name: Dynamic Configuration Manager
+    application: DynamicConfiguration
+    version: latest
+    deploymentType: Managed
+    resources:
+      cpu: 500
+      memory: 1000
+      replicas: 1
+    configuration:
+      topic: edf-data
+      mongoHost: sdf
+      mongoPort: sdf
+      mongoUser: sdf
+      mongoPasswordSecret: sdfs
+      mongoDatabase: sdfsdf
+      mongoCollection: sdfsdf
 
 # This section describes the Topics of the data pipeline
 topics:
