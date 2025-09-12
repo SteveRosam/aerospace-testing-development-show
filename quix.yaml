@@ -74,6 +74,13 @@ deployments:
         description: This is the output topic for hello world data
         required: true
         value: lead-data
+    plugin:
+      embeddedView: true
+      sidebarItem:
+        show: true
+        label: Lead Capture
+        icon: wheel
+        order: 1
   - name: WIFI Heartbeat
     application: wifi-heartbeat
     version: latest
