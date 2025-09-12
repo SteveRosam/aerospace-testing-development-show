@@ -79,7 +79,7 @@ deployments:
       sidebarItem:
         show: true
         label: Lead Capture
-        icon: wheel
+        icon: AddBox
         order: 1
   - name: WIFI Heartbeat
     application: wifi-heartbeat
